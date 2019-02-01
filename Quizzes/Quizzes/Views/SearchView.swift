@@ -10,12 +10,46 @@ import UIKit
 
 class SearchView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    lazy var searchCollectionView: UICollectionView = {
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize.init(width: 190, height: 280)
+        layout.sectionInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0)
+        
+        layout.scrollDirection = .vertical
+        var cv = UICollectionView.init(frame: self.bounds, collectionViewLayout: layout)
+        cv.backgroundColor = .green
+        return cv
+        
+    }()
+    override init(frame: CGRect) {
+        super.init(frame: UIScreen.main.bounds)
+        commonInit()
     }
-    */
-
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+        
+    }
+    private func commonInit(){
+        setUpViews()
+                self.searchCollectionView.register(SearchCollectionViewCell.self, forCellWithReuseIdentifier: "SearchCell")
+        
+    }
+    private func setUpViews() {
+        setupCollectionView()
+        
+    }
+    private func setupCollectionView() {
+        addSubview(searchCollectionView)
+        searchCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        searchCollectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
+        searchCollectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
+        searchCollectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 0).isActive = true
+        searchCollectionView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: 0).isActive = true
+        //        myCollectionView.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0).isActive = true
+        //        myCollectionView.heightAnchor.constraint(equalToConstant: 400).isActive = true
+        //        myCollectionView.widthAnchor.constraint(equalToConstant: 400).isActive = true
+    }
 }

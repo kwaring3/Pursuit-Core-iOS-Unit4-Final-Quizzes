@@ -8,7 +8,9 @@
 
 import Foundation
 
-
+struct Results: Codable{
+    let results: [Quiz]
+}
 struct Quiz: Codable {
     let id: String
     let quizTitle: String

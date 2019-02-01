@@ -10,12 +10,36 @@ import UIKit
 
 class ProfileView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    lazy var imageView1: UIImageView = {
+       let myImageView = UIImageView()
+        myImageView.backgroundColor = .gray
+        return myImageView
+    }()
+    override init(frame: CGRect) {
+        super.init(frame: UIScreen.main.bounds)
+        commonInit()
     }
-    */
-
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+        
+    }
+    private func commonInit(){
+        setUpViews()
+        //        self.myCollectionView.register(BSCollectionViewCell.self, forCellWithReuseIdentifier: "BestSellerCell")
+        
+    }
+    private func setUpViews() {
+        setUpImageView()
+    }
+    private func setUpImageView() {
+        addSubview(imageView1)
+        imageView1.backgroundColor = .gray
+        imageView1.translatesAutoresizingMaskIntoConstraints = false
+        imageView1.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 50).isActive = true
+        imageView1.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 11).isActive = true
+        imageView1.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -11).isActive = true
+        imageView1.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+    }
 }

@@ -9,22 +9,52 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-
+    
+    var info = [Quiz]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.searchView.searchCollectionView.reloadData()
+            }
+        }
+    }
+        var searchView = SearchView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.addSubview(searchView)
+        searchView.searchCollectionView.dataSource = self
+        searchView.searchCollectionView.delegate = self
     }
     
 
-    /*
-    // MARK: - Navigation
+    
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+extension SearchViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return info.count
     }
-    */
-
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCell", for: indexPath) as? SearchCollectionViewCell else {return UICollectionViewCell()}
+        let bookToSet = info[indexPath.row]
+        cell.label1.text = bookToSet.quizTitle
+        cell.backgroundColor = .gray
+//        APIClient.getGoogleData(isbn: (bookToSet.book_details.first?.primary_isbn10)!) { (appError, data) in
+//            if let appError = appError {
+//                print(appError)
+//            }
+//            if let data = data {
+//                ImageHelper.fetchImageFromNetwork(urlString: (data[0].volumeInfo.imageLinks.smallThumbnail.absoluteString), completion: { (appError, image) in
+//                    if let appError = appError {
+//                        print(appError)
+//                    }
+//                    if let image = image {
+//                        cell.bookImage.image = image
+//                    }
+//                })
+//            }
+//        }
+        return cell
+}
 }

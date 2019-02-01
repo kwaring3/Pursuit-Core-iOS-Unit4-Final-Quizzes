@@ -20,13 +20,13 @@ class TabBarController: UITabBarController {
             
             let secondViewController = SearchViewController()
             
-            secondViewController.tabBarItem = UITabBarItem(title:"Search", image: UIImage(named: "placeholder-image"), tag: 0)
+            secondViewController.tabBarItem = UITabBarItem(title:"Search", image: UIImage(named: "create-icon"), tag: 0)
             
             let thirdViewController = CreateViewController()
             
             thirdViewController.tabBarItem = UITabBarItem(title:"Create", image: UIImage(named: "create-icon"), tag: 0)
             
-            let fourthViewController = CreateViewController()
+            let fourthViewController = ProfileViewController()
             
             fourthViewController.tabBarItem = UITabBarItem(title:"Profile", image: UIImage(named: "profile-unfilled"), tag: 0)
             

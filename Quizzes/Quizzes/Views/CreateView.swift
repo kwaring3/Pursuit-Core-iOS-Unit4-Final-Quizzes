@@ -11,7 +11,7 @@ import UIKit
 class CreateView: UIView {
     lazy var textField: UITextField = {
         let textField = UITextField()
-        textField.backgroundColor = .gray
+        textField.backgroundColor = .purple
         return textField
     }()
     lazy var createText1: UITextView = {
@@ -45,20 +45,44 @@ class CreateView: UIView {
     }
     private func setUpViews() {
         setUpTextField()
-        
+        setUpTextView1()
+        setUpTextView2()
     }
     private func setUpTextField() {
         addSubview(textField)
+        textField.backgroundColor = .green
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 11)
-        textField.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 11)
-        textField.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -11)
-        textField.centerYAnchor.constraint(equalTo: centerYAnchor)
+        textField.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 11).isActive = true
+        textField.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 11).isActive = true
+        textField.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -11).isActive = true
+        textField.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        textField.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         
     }
     
     private func setUpTextView1() {
+        addSubview(createText1)
+        createText1.backgroundColor = .gray
+        createText1.translatesAutoresizingMaskIntoConstraints = false
+        createText1.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 22).isActive = true
+        createText1.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 11).isActive = true
+        createText1.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: -11).isActive = true
+        createText1.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
+        createText1.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        createText1.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        
         
     }
+    private func setUpTextView2() {
+        addSubview(createText2)
+        createText2.translatesAutoresizingMaskIntoConstraints = false
+        createText2.topAnchor.constraint(equalTo: createText1.bottomAnchor, constant: 22).isActive = true
+        createText2.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 11).isActive = true
+        createText2.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: -11).isActive = true
+        createText2.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        
+        
+    }
+    
     
 }

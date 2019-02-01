@@ -22,6 +22,8 @@
 		1F5844EC2204A09900B6DFF5 /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5844EB2204A09900B6DFF5 /* QuizModel.swift */; };
 		1F5844EE2204A97B00B6DFF5 /* QuizzesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5844ED2204A97B00B6DFF5 /* QuizzesCollectionViewCell.swift */; };
 		1F5844F02204ACFB00B6DFF5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5844EF2204ACFB00B6DFF5 /* TabBarController.swift */; };
+		1F5844F22204D5DD00B6DFF5 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5844F12204D5DD00B6DFF5 /* SearchCollectionViewCell.swift */; };
+		1F5844F42204DE4200B6DFF5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5844F32204DE4100B6DFF5 /* APIClient.swift */; };
 		577118C12203796A00B9DD0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577118C02203796A00B9DD0B /* AppDelegate.swift */; };
 		577118C82203796B00B9DD0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 577118C72203796B00B9DD0B /* Assets.xcassets */; };
 		577118CB2203796B00B9DD0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577118C92203796B00B9DD0B /* LaunchScreen.storyboard */; };
@@ -48,6 +50,8 @@
 		1F5844EB2204A09900B6DFF5 /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
 		1F5844ED2204A97B00B6DFF5 /* QuizzesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzesCollectionViewCell.swift; sourceTree = "<group>"; };
 		1F5844EF2204ACFB00B6DFF5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		1F5844F12204D5DD00B6DFF5 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		1F5844F32204DE4100B6DFF5 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		577118BD2203796A00B9DD0B /* Quizzes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizzes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		577118C02203796A00B9DD0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		577118C72203796B00B9DD0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 				1F5844DF22049E5D00B6DFF5 /* QuizzesViewController.swift */,
 				1F5844E122049E7600B6DFF5 /* QuizzesDetailViewController.swift */,
 				1F5844E322049EA000B6DFF5 /* SearchViewController.swift */,
+				1F5844F32204DE4100B6DFF5 /* APIClient.swift */,
 				1F5844E522049EB800B6DFF5 /* SearchDetailViewController.swift */,
 				1F5844E722049ECD00B6DFF5 /* CreateViewController.swift */,
 				1F5844E922049EE000B6DFF5 /* ProfileViewController.swift */,
@@ -109,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				1F5844ED2204A97B00B6DFF5 /* QuizzesCollectionViewCell.swift */,
+				1F5844F12204D5DD00B6DFF5 /* SearchCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -254,6 +260,7 @@
 			files = (
 				1F5844E422049EA000B6DFF5 /* SearchViewController.swift in Sources */,
 				1F5844D422049C8B00B6DFF5 /* QuizzesView.swift in Sources */,
+				1F5844F22204D5DD00B6DFF5 /* SearchCollectionViewCell.swift in Sources */,
 				1F5844D822049CE200B6DFF5 /* SearchView.swift in Sources */,
 				1F5844E822049ECD00B6DFF5 /* CreateViewController.swift in Sources */,
 				577118D722037ABA00B9DD0B /* NetworkHelper.swift in Sources */,
@@ -272,6 +279,7 @@
 				1F5844DE22049DE300B6DFF5 /* SearchDetailView.swift in Sources */,
 				1F5844F02204ACFB00B6DFF5 /* TabBarController.swift in Sources */,
 				1F5844DC22049D3900B6DFF5 /* ProfileView.swift in Sources */,
+				1F5844F42204DE4200B6DFF5 /* APIClient.swift in Sources */,
 				577118DD22037B8E00B9DD0B /* Date+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

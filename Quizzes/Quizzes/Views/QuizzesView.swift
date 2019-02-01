@@ -18,7 +18,7 @@ class QuizzesView: UIView {
         
         layout.scrollDirection = .vertical
         var cv = UICollectionView.init(frame: self.bounds, collectionViewLayout: layout)
-        cv.backgroundColor = .white
+        cv.backgroundColor = .orange
         return cv
         
     }()
