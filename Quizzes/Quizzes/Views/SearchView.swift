@@ -33,8 +33,8 @@ class SearchView: UIView {
         
     }
     private func commonInit(){
+        self.searchCollectionView.register(SearchCollectionViewCell.self, forCellWithReuseIdentifier: "SearchCell")
         setUpViews()
-                self.searchCollectionView.register(SearchCollectionViewCell.self, forCellWithReuseIdentifier: "SearchCell")
         
     }
     private func setUpViews() {

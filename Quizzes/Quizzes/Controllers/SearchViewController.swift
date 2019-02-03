@@ -32,14 +32,14 @@ class SearchViewController: UIViewController {
 }
 extension SearchViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return info.count
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCell", for: indexPath) as? SearchCollectionViewCell else {return UICollectionViewCell()}
-        let bookToSet = info[indexPath.row]
-        cell.label1.text = bookToSet.quizTitle
-        cell.backgroundColor = .gray
+//        let bookToSet = info[indexPath.row]
+//        cell.label1.text = bookToSet.quizTitle
+//        cell.backgroundColor = .gray
 //        APIClient.getGoogleData(isbn: (bookToSet.book_details.first?.primary_isbn10)!) { (appError, data) in
 //            if let appError = appError {
 //                print(appError)

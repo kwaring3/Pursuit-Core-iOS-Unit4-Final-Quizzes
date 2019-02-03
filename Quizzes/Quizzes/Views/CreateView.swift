@@ -50,6 +50,7 @@ class CreateView: UIView {
     }
     private func setUpTextField() {
         addSubview(textField)
+        textField.text = "Enter Quiz Title"
         textField.backgroundColor = .green
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 11).isActive = true
@@ -62,24 +63,28 @@ class CreateView: UIView {
     
     private func setUpTextView1() {
         addSubview(createText1)
+        createText1.text = "Enter First Quiz Question"
         createText1.backgroundColor = .gray
         createText1.translatesAutoresizingMaskIntoConstraints = false
-        createText1.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 22).isActive = true
+        createText1.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 11).isActive = true
         createText1.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 11).isActive = true
-        createText1.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: -11).isActive = true
-        createText1.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
-        createText1.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        createText1.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        createText1.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -11).isActive = true
+//        createText1.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
+        createText1.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        createText1.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         
         
     }
     private func setUpTextView2() {
         addSubview(createText2)
+        createText2.text = "Enter Second Quiz Question"
+        createText2.backgroundColor = .purple
         createText2.translatesAutoresizingMaskIntoConstraints = false
-        createText2.topAnchor.constraint(equalTo: createText1.bottomAnchor, constant: 22).isActive = true
+        createText2.topAnchor.constraint(equalTo: createText1.bottomAnchor, constant: 11).isActive = true
         createText2.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 11).isActive = true
-        createText2.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: -11).isActive = true
-        createText2.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        createText2.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -11).isActive = true
+        createText2.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        createText2.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         
         
     }
