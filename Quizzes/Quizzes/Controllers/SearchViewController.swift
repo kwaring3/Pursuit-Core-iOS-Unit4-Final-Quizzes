@@ -24,37 +24,27 @@ class SearchViewController: UIViewController {
         view.addSubview(searchView)
         searchView.searchCollectionView.dataSource = self
         searchView.searchCollectionView.delegate = self
+        APIClient.getQuizInfo { (error, data) in
+            if let error = error{
+               print(error)
+            } else if let data = data {
+                self.info = data
+            }
+        }
     }
-    
-
-    
 
 }
 extension SearchViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return info.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCell", for: indexPath) as? SearchCollectionViewCell else {return UICollectionViewCell()}
-//        let bookToSet = info[indexPath.row]
-//        cell.label1.text = bookToSet.quizTitle
-//        cell.backgroundColor = .gray
-//        APIClient.getGoogleData(isbn: (bookToSet.book_details.first?.primary_isbn10)!) { (appError, data) in
-//            if let appError = appError {
-//                print(appError)
-//            }
-//            if let data = data {
-//                ImageHelper.fetchImageFromNetwork(urlString: (data[0].volumeInfo.imageLinks.smallThumbnail.absoluteString), completion: { (appError, image) in
-//                    if let appError = appError {
-//                        print(appError)
-//                    }
-//                    if let image = image {
-//                        cell.bookImage.image = image
-//                    }
-//                })
-//            }
-//        }
+        let dataToSet = info[indexPath.row]
+        cell.label1.text = dataToSet.quizTitle
+        cell.backgroundColor = .gray
+
         return cell
 }
 }

@@ -34,7 +34,7 @@ class QuizzesView: UIView {
     }
     private func commonInit(){
         setUpViews()
-//        self.myCollectionView.register(BSCollectionViewCell.self, forCellWithReuseIdentifier: "BestSellerCell")
+       self.myCollectionView.register(QuizzesCollectionViewCell.self, forCellWithReuseIdentifier: "QuizCell")
         
     }
     private func setUpViews() {

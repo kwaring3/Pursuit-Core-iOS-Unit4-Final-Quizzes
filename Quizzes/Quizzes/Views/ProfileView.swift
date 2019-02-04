@@ -22,6 +22,7 @@ class ProfileView: UIView {
     }()
     lazy var profileNamelabel: UILabel = {
         let label = UILabel()
+        label.text = "Name"
         return label
     }()
     override init(frame: CGRect) {

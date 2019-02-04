@@ -24,6 +24,9 @@
 		1F5844F02204ACFB00B6DFF5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5844EF2204ACFB00B6DFF5 /* TabBarController.swift */; };
 		1F5844F22204D5DD00B6DFF5 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5844F12204D5DD00B6DFF5 /* SearchCollectionViewCell.swift */; };
 		1F5844F42204DE4200B6DFF5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5844F32204DE4100B6DFF5 /* APIClient.swift */; };
+		1F8E8A9F2207C43C001A2CE5 /* userDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E8A9E2207C43C001A2CE5 /* userDefaultKeys.swift */; };
+		1F8E8AA12207DDF7001A2CE5 /* FavoriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E8AA02207DDF7001A2CE5 /* FavoriteModel.swift */; };
+		1F8E8AA32207E8E6001A2CE5 /* DataPersistenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E8AA22207E8E6001A2CE5 /* DataPersistenceModel.swift */; };
 		577118C12203796A00B9DD0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577118C02203796A00B9DD0B /* AppDelegate.swift */; };
 		577118C82203796B00B9DD0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 577118C72203796B00B9DD0B /* Assets.xcassets */; };
 		577118CB2203796B00B9DD0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577118C92203796B00B9DD0B /* LaunchScreen.storyboard */; };
@@ -52,6 +55,9 @@
 		1F5844EF2204ACFB00B6DFF5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		1F5844F12204D5DD00B6DFF5 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		1F5844F32204DE4100B6DFF5 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		1F8E8A9E2207C43C001A2CE5 /* userDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDefaultKeys.swift; sourceTree = "<group>"; };
+		1F8E8AA02207DDF7001A2CE5 /* FavoriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteModel.swift; sourceTree = "<group>"; };
+		1F8E8AA22207E8E6001A2CE5 /* DataPersistenceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceModel.swift; sourceTree = "<group>"; };
 		577118BD2203796A00B9DD0B /* Quizzes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizzes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		577118C02203796A00B9DD0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		577118C72203796B00B9DD0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				1F5844EB2204A09900B6DFF5 /* QuizModel.swift */,
+				1F8E8AA02207DDF7001A2CE5 /* FavoriteModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -105,6 +112,7 @@
 				1F5844F32204DE4100B6DFF5 /* APIClient.swift */,
 				1F5844E522049EB800B6DFF5 /* SearchDetailViewController.swift */,
 				1F5844E722049ECD00B6DFF5 /* CreateViewController.swift */,
+				1F8E8AA22207E8E6001A2CE5 /* DataPersistenceModel.swift */,
 				1F5844E922049EE000B6DFF5 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
@@ -156,6 +164,7 @@
 			children = (
 				577118D422037A9F00B9DD0B /* AppError.swift */,
 				577118D622037ABA00B9DD0B /* NetworkHelper.swift */,
+				1F8E8A9E2207C43C001A2CE5 /* userDefaultKeys.swift */,
 			);
 			path = "Network Services";
 			sourceTree = "<group>";
@@ -274,10 +283,13 @@
 				1F5844EE2204A97B00B6DFF5 /* QuizzesCollectionViewCell.swift in Sources */,
 				577118D522037A9F00B9DD0B /* AppError.swift in Sources */,
 				1F5844EC2204A09900B6DFF5 /* QuizModel.swift in Sources */,
+				1F8E8A9F2207C43C001A2CE5 /* userDefaultKeys.swift in Sources */,
 				577118DA22037B5B00B9DD0B /* DataPersistenceManager.swift in Sources */,
 				577118DF22037BAA00B9DD0B /* String+DateExtensions.swift in Sources */,
 				1F5844DE22049DE300B6DFF5 /* SearchDetailView.swift in Sources */,
 				1F5844F02204ACFB00B6DFF5 /* TabBarController.swift in Sources */,
+				1F8E8AA32207E8E6001A2CE5 /* DataPersistenceModel.swift in Sources */,
+				1F8E8AA12207DDF7001A2CE5 /* FavoriteModel.swift in Sources */,
 				1F5844DC22049D3900B6DFF5 /* ProfileView.swift in Sources */,
 				1F5844F42204DE4200B6DFF5 /* APIClient.swift in Sources */,
 				577118DD22037B8E00B9DD0B /* Date+Extensions.swift in Sources */,

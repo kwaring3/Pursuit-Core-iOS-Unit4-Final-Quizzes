@@ -9,10 +9,10 @@
 import UIKit
 
 class CreateView: UIView {
-    lazy var textField: UITextField = {
-        let textField = UITextField()
-        textField.backgroundColor = .purple
-        return textField
+    lazy var textView1: UITextView = {
+        let textView = UITextView()
+        textView.backgroundColor = .purple
+        return textView
     }()
     lazy var createText1: UITextView = {
         let textView = UITextView()
@@ -49,15 +49,15 @@ class CreateView: UIView {
         setUpTextView2()
     }
     private func setUpTextField() {
-        addSubview(textField)
-        textField.text = "Enter Quiz Title"
-        textField.backgroundColor = .green
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 11).isActive = true
-        textField.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 11).isActive = true
-        textField.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -11).isActive = true
-        textField.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        textField.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        addSubview(textView1)
+        textView1.text = "Enter Quiz Title"
+        textView1.backgroundColor = .green
+        textView1.translatesAutoresizingMaskIntoConstraints = false
+        textView1.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 11).isActive = true
+        textView1.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 11).isActive = true
+        textView1.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -11).isActive = true
+        textView1.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        textView1.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         
     }
     
@@ -66,7 +66,7 @@ class CreateView: UIView {
         createText1.text = "Enter First Quiz Question"
         createText1.backgroundColor = .gray
         createText1.translatesAutoresizingMaskIntoConstraints = false
-        createText1.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 11).isActive = true
+        createText1.topAnchor.constraint(equalTo: textView1.bottomAnchor, constant: 11).isActive = true
         createText1.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 11).isActive = true
         createText1.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -11).isActive = true
 //        createText1.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true

@@ -1,16 +1,16 @@
 //
-//  QuizModel.swift
+//  FavoriteModel.swift
 //  Quizzes
 //
-//  Created by Kevin Waring on 2/1/19.
+//  Created by Kevin Waring on 2/3/19.
 //  Copyright © 2019 Alex Paul. All rights reserved.
 //
 
 import Foundation
 
-struct Quiz: Codable {
-    let id: String
+
+struct Favorite: Codable {
     let quizTitle: String
     let facts: [String]
-    
+    let createdAt: String
 }
