@@ -46,7 +46,7 @@ class ProfileView: UIView {
     }
     private func setUpImageView() {
         addSubview(imageView1)
-        imageView1.backgroundColor = .gray
+        imageView1.backgroundColor = .white
         imageView1.translatesAutoresizingMaskIntoConstraints = false
         imageView1.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 50).isActive = true
         imageView1.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 11).isActive = true
@@ -58,6 +58,7 @@ class ProfileView: UIView {
     private func setUpButton() {
         addSubview(imageButton)
         imageButton.backgroundColor = .black
+       // imageButton.setImage(UIImage.init(named: "placeholder-image"), for: .normal)
         imageButton.translatesAutoresizingMaskIntoConstraints = false
         imageButton.topAnchor.constraint(equalTo: imageView1.topAnchor, constant: 30).isActive = true
         imageButton.heightAnchor.constraint(equalToConstant: 150).isActive = true
@@ -66,7 +67,7 @@ class ProfileView: UIView {
     }
     private func setUpLabel() {
         addSubview(profileNamelabel)
-        profileNamelabel.backgroundColor = .white
+        profileNamelabel.backgroundColor = .gray
         profileNamelabel.translatesAutoresizingMaskIntoConstraints = false
         profileNamelabel.topAnchor.constraint(equalTo: imageButton.bottomAnchor, constant: 40).isActive = true
         profileNamelabel.heightAnchor.constraint(equalToConstant: 30).isActive = true

@@ -21,7 +21,7 @@ class ProfileViewController: UIViewController {
         let imageButton2 = profileView.imageButton
         imageButton2.addTarget(self, action: #selector(imageButtonPressed), for: .touchUpInside)
         self.title = "Profile"
-
+        view.backgroundColor = .white
         
         
     }
@@ -90,7 +90,7 @@ extension ProfileViewController: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         if profileView.profileNamelabel.text == descriptionText {
              profileView.profileNamelabel.text = ""
-            profileView.profileNamelabel.textColor = .black
+            profileView.profileNamelabel.textColor = .gray
         }
     }
 }
