@@ -24,6 +24,11 @@ class ProfileView: UIView {
         label.text = "Name"
         return label
     }()
+    lazy var invisibleButton: UIButton = {
+        let iButton = UIButton()
+        iButton.backgroundColor = .clear
+        return iButton
+    }()
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
         commonInit()
@@ -43,6 +48,7 @@ class ProfileView: UIView {
         setUpImageView()
         setUpButton()
         setUpLabel()
+        setUpIButton()
     }
     private func setUpImageView() {
         addSubview(imageView1)
@@ -73,6 +79,16 @@ class ProfileView: UIView {
         profileNamelabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
         profileNamelabel.widthAnchor.constraint(equalToConstant: 150).isActive = true
         profileNamelabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        
+    }
+    private func setUpIButton() {
+        addSubview(invisibleButton)
+        invisibleButton.backgroundColor = .clear
+        invisibleButton.translatesAutoresizingMaskIntoConstraints = false
+        invisibleButton.topAnchor.constraint(equalTo: imageButton.bottomAnchor, constant: 40).isActive = true
+        invisibleButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        invisibleButton.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        invisibleButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         
     }
 }

@@ -51,7 +51,12 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
         let dataToSet = info[indexPath.row]
         cell.label1.text = dataToSet.quizTitle
         cell.backgroundColor = .white
-
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderWidth = 1
         return cell
 }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize.init(width: 400, height: 400)
+    }
 }
+

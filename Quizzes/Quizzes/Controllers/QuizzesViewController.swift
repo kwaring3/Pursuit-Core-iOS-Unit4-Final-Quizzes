@@ -24,6 +24,7 @@ class QuizzesViewController: UIViewController {
         quizzesView.myCollectionView.dataSource = self
         quizInfo = DataPersistenceModel.get()
         self.title = "My Quizzes"
+        
     
         
     }
@@ -67,10 +68,11 @@ extension QuizzesViewController: UICollectionViewDataSource {
         cell.backgroundColor = .white
         cell.button.tag = indexPath.row
         cell.button.addTarget(self, action: #selector(buttonPressed(sender:)), for: .touchUpInside)
-       
-        
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderWidth = 1
         return cell
     }
     
     
 }
+

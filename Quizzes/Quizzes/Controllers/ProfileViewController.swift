@@ -20,6 +20,8 @@ class ProfileViewController: UIViewController {
         imagePicker.delegate = self
         let imageButton2 = profileView.imageButton
         imageButton2.addTarget(self, action: #selector(imageButtonPressed), for: .touchUpInside)
+        let iButton = profileView.invisibleButton
+        iButton.addTarget(self, action: #selector(iButtonPressed), for: .touchUpInside)
         self.title = "Profile"
         view.backgroundColor = .white
         
@@ -65,6 +67,30 @@ class ProfileViewController: UIViewController {
             showImagePickerController()
         
             }
+    @objc func iButtonPressed() {
+        let alert = UIAlertController.init(title: "Please Enter User Name", message: "No spaces allowed or special Characters", preferredStyle: .alert)
+        let submit = UIAlertAction.init(title: "Submit", style: .default) { (UIAlertAction) in
+            
+            guard let defaultSearch = alert.textFields?.first?.text else {
+                print("alert textfield is nil")
+                return
+            }
+            
+            self.profileView.profileNamelabel.text = defaultSearch
+            
+            
+            self.dismiss(animated: true, completion: nil)
+            
+            
+        }
+        alert.addTextField { (textField) in
+            textField.placeholder = "Enter User Name"
+            textField.textAlignment = .center
+            
+            alert.addAction(submit)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
             
             
         }
