@@ -69,7 +69,6 @@ class CreateView: UIView {
         createText1.topAnchor.constraint(equalTo: textView1.bottomAnchor, constant: 11).isActive = true
         createText1.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 11).isActive = true
         createText1.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -11).isActive = true
-//        createText1.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
         createText1.heightAnchor.constraint(equalToConstant: 200).isActive = true
         createText1.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         

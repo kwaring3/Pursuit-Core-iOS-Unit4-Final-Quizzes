@@ -12,7 +12,6 @@ class ProfileView: UIView {
 
     lazy var imageView1: UIImageView = {
        let myImageView = UIImageView()
-        //myImageView.backgroundColor = .gray
         return myImageView
     }()
     lazy var imageButton: UIButton = {
@@ -37,7 +36,7 @@ class ProfileView: UIView {
     }
     private func commonInit(){
         setUpViews()
-        //        self.myCollectionView.register(BSCollectionViewCell.self, forCellWithReuseIdentifier: "BestSellerCell")
+        
         
     }
     private func setUpViews() {
@@ -52,7 +51,6 @@ class ProfileView: UIView {
         imageView1.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 50).isActive = true
         imageView1.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 11).isActive = true
         imageView1.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -11).isActive = true
-        //imageView1.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -200)
         imageView1.heightAnchor.constraint(equalToConstant: 300).isActive = true
         
         imageView1.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
@@ -62,9 +60,6 @@ class ProfileView: UIView {
         imageButton.backgroundColor = .black
         imageButton.translatesAutoresizingMaskIntoConstraints = false
         imageButton.topAnchor.constraint(equalTo: imageView1.topAnchor, constant: 30).isActive = true
-        //imageView1.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 11).isActive = true
-        //imageView1.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -11).isActive = true
-        //imageView1.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -200)
         imageButton.heightAnchor.constraint(equalToConstant: 150).isActive = true
         imageButton.widthAnchor.constraint(equalToConstant: 150).isActive = true
         imageButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true

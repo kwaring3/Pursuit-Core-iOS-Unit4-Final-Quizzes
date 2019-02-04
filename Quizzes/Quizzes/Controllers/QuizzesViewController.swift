@@ -28,6 +28,7 @@ class QuizzesViewController: UIViewController {
         
     }
     override func viewWillAppear(_ animated: Bool) {
+        quizzesView.myCollectionView.reloadData()
         quizInfo = DataPersistenceModel.get()
     }
     func reload() {
@@ -38,8 +39,9 @@ class QuizzesViewController: UIViewController {
         let index = sender.tag
         let actionSheet = UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
         let delete = UIAlertAction(title: "Delete", style: .destructive) { (UIAlertAction) in
-            DataPersistenceModel.deleteQuiz(index: index);index
+            DataPersistenceModel.deleteQuiz(index: index)
             self.reload()
+            self.quizzesView.myCollectionView.reloadData()
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (alert: UIAlertAction!) -> Void in
             
@@ -65,6 +67,8 @@ extension QuizzesViewController: UICollectionViewDataSource {
         cell.backgroundColor = .white
         cell.button.tag = indexPath.row
         cell.button.addTarget(self, action: #selector(buttonPressed(sender:)), for: .touchUpInside)
+       
+        
         return cell
     }
     

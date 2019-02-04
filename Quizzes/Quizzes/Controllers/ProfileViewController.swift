@@ -16,9 +16,6 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(profileView)
-//        imageButton.tag = indexPath.row
-//        imageButton.addTarget(self, action: #selector(imageButtonPressed(sender:)), for: .touchUpInside)
-//        let imageButton2 = UIButton(title: "imageButton", style: .plain, target: self, action: #selector(imageButtonPressed))
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         let imageButton2 = profileView.imageButton
@@ -80,8 +77,7 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate{
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             profileView.imageButton.setBackgroundImage(image, for: .normal)
             print(image)
-            //savePhotoJournal(image: image)
-//            imageSelected = image
+            
         } else {
             print("nil")
         }

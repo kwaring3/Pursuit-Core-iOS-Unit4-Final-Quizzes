@@ -11,6 +11,8 @@ import UIKit
 class SearchCollectionViewCell: UICollectionViewCell {
     lazy var label1: UILabel = {
         let myLabel = UILabel()
+        myLabel.textAlignment = .center
+        myLabel.font = UIFont.boldSystemFont(ofSize: 14.0)
         return myLabel
     }()
     lazy var button: UIButton = {
@@ -35,11 +37,25 @@ class SearchCollectionViewCell: UICollectionViewCell {
 extension SearchCollectionViewCell {
     private func setupCells() {
        setUpLabel()
+        setUpButton()
     }
     private func setUpLabel() {
         addSubview(label1)
         label1.backgroundColor = .white
         label1.translatesAutoresizingMaskIntoConstraints = false
+        label1.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         label1.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        label1.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 11).isActive = true
+        label1.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -11).isActive = true
+    }
+    private func setUpButton() {
+        addSubview(button)
+        button.setImage(UIImage.init(named: "add-icon-filled"), for: .normal)
+        button.backgroundColor = .white
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.topAnchor.constraint(equalTo: topAnchor, constant: 11).isActive = true
+        button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 25).isActive = true
     }
 }

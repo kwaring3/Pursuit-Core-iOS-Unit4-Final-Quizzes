@@ -49,8 +49,6 @@ class QuizzesView: UIView {
         myCollectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
         myCollectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 0).isActive = true
         myCollectionView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: 0).isActive = true
-//        myCollectionView.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0).isActive = true
-//        myCollectionView.heightAnchor.constraint(equalToConstant: 400).isActive = true
-//        myCollectionView.widthAnchor.constraint(equalToConstant: 400).isActive = true
+
     }
 }

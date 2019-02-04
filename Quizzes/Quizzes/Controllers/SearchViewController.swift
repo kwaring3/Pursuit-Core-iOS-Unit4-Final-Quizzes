@@ -37,7 +37,7 @@ class SearchViewController: UIViewController {
 //        let date = Date.getISOTimestamp()
 //        let favorite = Quiz.init(id: self.searchView., quizTitle: <#T##String#>, facts: <#T##[String]#>)
 //        DataPersistenceModel.add(quiz: favorite)
-//        
+//
 //    }
 
 }
@@ -50,7 +50,7 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCell", for: indexPath) as? SearchCollectionViewCell else {return UICollectionViewCell()}
         let dataToSet = info[indexPath.row]
         cell.label1.text = dataToSet.quizTitle
-        cell.backgroundColor = .gray
+        cell.backgroundColor = .white
 
         return cell
 }

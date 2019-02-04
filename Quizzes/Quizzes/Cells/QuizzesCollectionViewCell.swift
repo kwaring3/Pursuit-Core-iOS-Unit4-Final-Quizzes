@@ -51,7 +51,6 @@ extension QuizzesCollectionViewCell {
         Label.translatesAutoresizingMaskIntoConstraints = false
         Label.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         Label.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        //Label.topAnchor.constraint(equalTo:topAnchor, constant: 5).isActive = true
         Label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -11).isActive = true
         Label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 11).isActive = true
         Label.heightAnchor.constraint(equalToConstant: 20).isActive = true

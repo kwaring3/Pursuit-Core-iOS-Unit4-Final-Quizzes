@@ -18,7 +18,7 @@ class SearchView: UIView {
         
         layout.scrollDirection = .vertical
         var cv = UICollectionView.init(frame: self.bounds, collectionViewLayout: layout)
-        cv.backgroundColor = .green
+        cv.backgroundColor = .white
         return cv
         
     }()
@@ -48,8 +48,6 @@ class SearchView: UIView {
         searchCollectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
         searchCollectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 0).isActive = true
         searchCollectionView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: 0).isActive = true
-        //        myCollectionView.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0).isActive = true
-        //        myCollectionView.heightAnchor.constraint(equalToConstant: 400).isActive = true
-        //        myCollectionView.widthAnchor.constraint(equalToConstant: 400).isActive = true
+        
     }
 }
