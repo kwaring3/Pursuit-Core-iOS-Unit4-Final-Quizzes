@@ -21,6 +21,7 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Search Quizzes Online"
         view.addSubview(searchView)
         searchView.searchCollectionView.dataSource = self
         searchView.searchCollectionView.delegate = self
@@ -32,6 +33,12 @@ class SearchViewController: UIViewController {
             }
         }
     }
+//    @objc private func save() {
+//        let date = Date.getISOTimestamp()
+//        let favorite = Quiz.init(id: self.searchView., quizTitle: <#T##String#>, facts: <#T##[String]#>)
+//        DataPersistenceModel.add(quiz: favorite)
+//        
+//    }
 
 }
 extension SearchViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

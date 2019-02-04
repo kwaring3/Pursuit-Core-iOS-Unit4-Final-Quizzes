@@ -23,6 +23,7 @@ class ProfileViewController: UIViewController {
         imagePicker.delegate = self
         let imageButton2 = profileView.imageButton
         imageButton2.addTarget(self, action: #selector(imageButtonPressed), for: .touchUpInside)
+        self.title = "Profile"
 
         
         

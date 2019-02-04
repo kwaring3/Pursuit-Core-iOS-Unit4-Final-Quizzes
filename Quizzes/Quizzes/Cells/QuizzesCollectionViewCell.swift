@@ -12,8 +12,9 @@ class QuizzesCollectionViewCell: UICollectionViewCell {
     
     lazy var Label: UILabel = {
         let label = UILabel()
-        label.backgroundColor = .gray
-        label.font = UIFont.systemFont(ofSize: 15.0)
+        label.backgroundColor = .white
+        label.font = UIFont.boldSystemFont(ofSize: 18.0)
+        label.textAlignment = .center
         return label
     }()
     lazy var button: UIButton = {
@@ -41,17 +42,28 @@ class QuizzesCollectionViewCell: UICollectionViewCell {
 }
 extension QuizzesCollectionViewCell {
     private func setupCells() {
-        
         setupLabel()
+        setUpButton()
         
     }
     private func setupLabel() {
         addSubview(Label)
         Label.translatesAutoresizingMaskIntoConstraints = false
         Label.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        Label.topAnchor.constraint(equalTo:topAnchor, constant: 5).isActive = true
+        Label.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        //Label.topAnchor.constraint(equalTo:topAnchor, constant: 5).isActive = true
         Label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -11).isActive = true
         Label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 11).isActive = true
         Label.heightAnchor.constraint(equalToConstant: 20).isActive = true
+    }
+    private func setUpButton() {
+        addSubview(button)
+        button.setImage(UIImage.init(named: "more-filled"), for: .normal)
+        button.backgroundColor = .white
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.topAnchor.constraint(equalTo: topAnchor, constant: 22).isActive = true
+        button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 50).isActive = true
     }
 }

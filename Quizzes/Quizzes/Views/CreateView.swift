@@ -11,7 +11,7 @@ import UIKit
 class CreateView: UIView {
     lazy var textView1: UITextView = {
         let textView = UITextView()
-        textView.backgroundColor = .purple
+        textView.backgroundColor = .lightText
         return textView
     }()
     lazy var createText1: UITextView = {
@@ -51,7 +51,7 @@ class CreateView: UIView {
     private func setUpTextField() {
         addSubview(textView1)
         textView1.text = "Enter Quiz Title"
-        textView1.backgroundColor = .green
+        textView1.backgroundColor = .lightText
         textView1.translatesAutoresizingMaskIntoConstraints = false
         textView1.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 11).isActive = true
         textView1.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 11).isActive = true
@@ -78,7 +78,7 @@ class CreateView: UIView {
     private func setUpTextView2() {
         addSubview(createText2)
         createText2.text = "Enter Second Quiz Question"
-        createText2.backgroundColor = .purple
+        createText2.backgroundColor = .gray
         createText2.translatesAutoresizingMaskIntoConstraints = false
         createText2.topAnchor.constraint(equalTo: createText1.bottomAnchor, constant: 11).isActive = true
         createText2.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 11).isActive = true

@@ -46,7 +46,7 @@ final class DataPersistenceModel {
         }
         return mainQuiz
     }
-    static func deleteFavoriteQuiz(index: Int) {
+    static func deleteQuiz(index: Int) {
         mainQuiz.remove(at: index)
         save()
     }
