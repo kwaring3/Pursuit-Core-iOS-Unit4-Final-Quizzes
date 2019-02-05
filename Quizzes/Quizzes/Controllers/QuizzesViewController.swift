@@ -29,7 +29,7 @@ class QuizzesViewController: UIViewController {
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        quizzesView.myCollectionView.reloadData()
+        //quizzesView.myCollectionView.reloadData()
         quizInfo = DataPersistenceModel.get()
     }
     func reload() {
@@ -41,6 +41,7 @@ class QuizzesViewController: UIViewController {
         let actionSheet = UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
         let delete = UIAlertAction(title: "Delete", style: .destructive) { (UIAlertAction) in
             DataPersistenceModel.deleteQuiz(index: index)
+            self.quizInfo = DataPersistenceModel.get()
             self.reload()
             self.quizzesView.myCollectionView.reloadData()
         }

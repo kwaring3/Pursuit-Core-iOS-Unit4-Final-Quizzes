@@ -9,10 +9,12 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    
     var profileView = ProfileView()
     private var descriptionText = "Name"
     private var imagePicker: UIImagePickerController!
     private var profileCreate = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(profileView)
@@ -54,11 +56,14 @@ class ProfileViewController: UIViewController {
             
             
         }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (alert: UIAlertAction!) -> Void in
+        }
         alert.addTextField { (textField) in
             textField.placeholder = "Enter User Name"
             textField.textAlignment = .center
             
             alert.addAction(submit)
+            alert.addAction(cancelAction)
             self.present(alert, animated: true, completion: nil)
         }
     }

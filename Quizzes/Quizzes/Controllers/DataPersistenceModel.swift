@@ -11,7 +11,7 @@ import Foundation
 final class DataPersistenceModel {
     private static var filename = "Quiz.plist"
     static var mainQuiz = [Favorite]()
-    
+
     private init() {}
     
     static func save() {
@@ -23,7 +23,7 @@ final class DataPersistenceModel {
             print("Property list encoding error (error)")
         }
     }
-    static func add(quiz: Favorite) {
+    static func add1(quiz: Favorite) {
         mainQuiz.append(quiz)
         save()
     }
@@ -50,4 +50,5 @@ final class DataPersistenceModel {
         mainQuiz.remove(at: index)
         save()
     }
+    
 }

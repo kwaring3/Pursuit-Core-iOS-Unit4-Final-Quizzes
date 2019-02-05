@@ -10,6 +10,9 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
+    var segueCards = ""
+    var onlineData = [String]()
+    var onlineID = ""
     var info = [Quiz]() {
         didSet {
             DispatchQueue.main.async {
@@ -33,12 +36,19 @@ class SearchViewController: UIViewController {
             }
         }
     }
-//    @objc private func save() {
-//        let date = Date.getISOTimestamp()
-//        let favorite = Quiz.init(id: self.searchView., quizTitle: <#T##String#>, facts: <#T##[String]#>)
-//        DataPersistenceModel.add(quiz: favorite)
-//
-//    }
+    @objc func add() {
+        let objectToSave = Favorite.init(quizTitle: segueCards, facts: onlineData, createdAt: Date.getISOTimestamp())
+        
+        DataPersistenceModel.add1(quiz: objectToSave)
+        
+        let objectSaved = UIAlertController.init(title: "Quiz is Good", message: nil, preferredStyle: .alert)
+        let ok = UIAlertAction.init(title: "ok", style: .default) { (UIAlertAction) in
+            self.dismiss(animated: true, completion: nil)
+        }
+        objectSaved.addAction(ok)
+        present(objectSaved, animated: true, completion: nil)
+    }
+
 
 }
 extension SearchViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -53,6 +63,12 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
         cell.backgroundColor = .white
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 1
+        cell.button.tag = indexPath.row
+        cell.button.addTarget(self, action: #selector(add), for: .touchUpInside)
+
+        self.segueCards = dataToSet.quizTitle
+        self.onlineData = dataToSet.facts
+        self.onlineID = dataToSet.id
         return cell
 }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
